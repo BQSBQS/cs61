@@ -1,0 +1,55 @@
+117666 execve("/bin/sh", ["sh", "-c", "echo foo > output.txt"], [/* 62 vars */]) = 0
+117666 brk(NULL)                        = 0x55da73f86000
+117666 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+117666 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f060afc3000
+117666 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+117666 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+117666 fstat(3, {st_mode=S_IFREG|0644, st_size=103084, ...}) = 0
+117666 mmap(NULL, 103084, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f060afa9000
+117666 close(3)                         = 0
+117666 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+117666 open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+117666 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+117666 fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
+117666 mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f060a9d6000
+117666 mprotect(0x7f060ab96000, 2097152, PROT_NONE) = 0
+117666 mmap(0x7f060ad96000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7f060ad96000
+117666 mmap(0x7f060ad9c000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f060ad9c000
+117666 close(3)                         = 0
+117666 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f060afa8000
+117666 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f060afa7000
+117666 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f060afa6000
+117666 arch_prctl(ARCH_SET_FS, 0x7f060afa7700) = 0
+117666 mprotect(0x7f060ad96000, 16384, PROT_READ) = 0
+117666 mprotect(0x55da72e3b000, 8192, PROT_READ) = 0
+117666 mprotect(0x7f060afc5000, 4096, PROT_READ) = 0
+117666 munmap(0x7f060afa9000, 103084)   = 0
+117666 getuid()                         = 1000
+117666 getgid()                         = 1000
+117666 getpid()                         = 117666
+117666 rt_sigaction(SIGCHLD, {0x55da72c2f540, ~[RTMIN RT_1], SA_RESTORER, 0x7f060aa0b4b0}, NULL, 8) = 0
+117666 geteuid()                        = 1000
+117666 brk(NULL)                        = 0x55da73f86000
+117666 brk(0x55da73fa7000)              = 0x55da73fa7000
+117666 getppid()                        = 117664
+117666 stat("/home/david/Documents/psetREPO/cs61-f17-psets-davidnoon/pset5", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+117666 stat(".", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+117666 geteuid()                        = 1000
+117666 getegid()                        = 1000
+117666 rt_sigaction(SIGINT, NULL, {SIG_DFL, [], 0}, 8) = 0
+117666 rt_sigaction(SIGINT, {0x55da72c2f540, ~[RTMIN RT_1], SA_RESTORER, 0x7f060aa0b4b0}, NULL, 8) = 0
+117666 rt_sigaction(SIGQUIT, NULL, {SIG_DFL, [], 0}, 8) = 0
+117666 rt_sigaction(SIGQUIT, {SIG_DFL, ~[RTMIN RT_1], SA_RESTORER, 0x7f060aa0b4b0}, NULL, 8) = 0
+117666 rt_sigaction(SIGTERM, NULL, {SIG_DFL, [], 0}, 8) = 0
+117666 rt_sigaction(SIGTERM, {SIG_DFL, ~[RTMIN RT_1], SA_RESTORER, 0x7f060aa0b4b0}, NULL, 8) = 0
+117666 open("output.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+117666 fcntl(1, F_DUPFD, 10)            = 10
+117666 close(1)                         = 0
+117666 fcntl(10, F_SETFD, FD_CLOEXEC)   = 0
+117666 dup2(3, 1)                       = 1
+117666 close(3)                         = 0
+117666 write(1, "foo\n", 4)             = 4
+117666 dup2(10, 1)                      = 1
+117666 close(10)                        = 0
+117666 exit_group(0)                    = ?
+117666 +++ exited with 0 +++
